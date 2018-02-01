@@ -13,18 +13,18 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <spark-core.version>2.2.1</spark-core.version>
         <spark.short.version>2.11</spark.short.version>
-        <hadoop-client.version>2.6.5</hadoop-client.version>
+        <hadoop-client.version>3.0.0</hadoop-client.version>
         <scopt.version>3.3.0</scopt.version>
+        <hbase.version>1.4.0</hbase.version>
     </properties>
     <repositories>
         <repository>
-            <id>scala-tools.org</id>
-            <name>Scala-Tools Maven2 Repository</name>
-            <url>http://scala-tools.org/repo-releases</url>
-        </repository>
-        <repository>
             <id>cloudera</id>
             <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
+        </repository>
+        <repository>
+            <id>maven-central</id>
+            <url>http://central.maven.org/maven2/</url>
         </repository>
     </repositories>
 
@@ -44,5 +44,12 @@
             <artifactId>spark-core_${spark.short.version}</artifactId>
             <version>${spark-core.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.hbase/hbase-client -->
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-client</artifactId>
+            <version>${hbase.version}</version>
+        </dependency>
+
     </dependencies>
 </project>
